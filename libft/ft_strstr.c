@@ -1,17 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarbaill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/13 14:44:38 by sarbaill          #+#    #+#             */
-/*   Updated: 2018/11/29 19:07:03 by sarbaill         ###   ########.fr       */
+/*   Created: 2018/11/30 18:09:27 by sarbaill          #+#    #+#             */
+/*   Updated: 2018/11/30 19:37:16 by sarbaill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ABS_H
-# define FT_ABS_H
-# define ABS(x) (x < 0 ? -x : x)
+#include <string.h>
+#include "libft.h"
 
-#endif
+char	*ft_strstr(const char *str, char *needle)
+{
+	int i;
+
+	i = 0;
+	while(str[i])
+	{
+		if (ft_strncmp(&str[i], needle, ft_strlen(needle)) == 0)
+			return ((char*)&str[i]);
+		i++;
+	}
+	return (0);
+}

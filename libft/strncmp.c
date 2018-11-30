@@ -1,17 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   strncmp.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarbaill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/13 14:44:38 by sarbaill          #+#    #+#             */
-/*   Updated: 2018/11/29 19:07:03 by sarbaill         ###   ########.fr       */
+/*   Created: 2018/11/30 19:38:33 by sarbaill          #+#    #+#             */
+/*   Updated: 2018/11/30 19:52:07 by sarbaill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ABS_H
-# define FT_ABS_H
-# define ABS(x) (x < 0 ? -x : x)
+#include <string.h>
 
-#endif
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	unsigned int i;
+
+	i = 0;
+	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
+	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
+	}
+	return (0);
+}
