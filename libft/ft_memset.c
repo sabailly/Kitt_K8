@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarbaill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/26 19:40:23 by sarbaill          #+#    #+#             */
-/*   Updated: 2018/12/02 23:01:03 by sarbaill         ###   ########.fr       */
+/*   Created: 2018/12/02 16:45:42 by sarbaill          #+#    #+#             */
+/*   Updated: 2018/12/02 17:12:21 by sarbaill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, char *src)
+void	*ft_memset(void *str, int c, size_t len)
 {
 	int i;
+	char *s;
 
 	i = 0;
-	while (src[i] !=	'\0')
+	s = (char*)str;
+	while (i < len)
 	{
-		dest[i] = src[i];
+		s[i] = (char)c;
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (str);
 }

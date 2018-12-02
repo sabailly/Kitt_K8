@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarbaill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/26 19:40:23 by sarbaill          #+#    #+#             */
-/*   Updated: 2018/12/02 23:01:03 by sarbaill         ###   ########.fr       */
+/*   Created: 2018/12/02 22:57:44 by sarbaill          #+#    #+#             */
+/*   Updated: 2018/12/02 22:57:51 by sarbaill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dest, char *src)
+void	ft_putendl(char *str)
 {
 	int i;
 
 	i = 0;
-	while (src[i] !=	'\0')
+	while (str[i])
 	{
-		dest[i] = src[i];
+		ft_putchar(str[i]);
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	ft_putchar('\n');
 }

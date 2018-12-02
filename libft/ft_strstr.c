@@ -6,11 +6,10 @@
 /*   By: sarbaill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/30 18:09:27 by sarbaill          #+#    #+#             */
-/*   Updated: 2018/11/30 19:37:16 by sarbaill         ###   ########.fr       */
+/*   Updated: 2018/12/02 22:58:47 by sarbaill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 char	*ft_strstr(const char *str, char *needle)
