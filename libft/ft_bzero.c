@@ -6,7 +6,7 @@
 /*   By: sarbaill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/05 17:00:26 by sarbaill          #+#    #+#             */
-/*   Updated: 2018/12/05 18:16:43 by sarbaill         ###   ########.fr       */
+/*   Updated: 2018/12/10 17:18:09 by sarbaill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	int i;
-	char *str;
+	size_t	i;
+	char	*str;
 
 	str = (char*)s;
 	i = 0;
-	while (str[i] < n)
+	while (i < n)
 	{
 		str[i] = '\0';
 		i++;

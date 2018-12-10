@@ -6,7 +6,7 @@
 #    By: sarbaill <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/02 23:53:25 by sarbaill          #+#    #+#              #
-#    Updated: 2018/12/10 17:11:27 by sarbaill         ###   ########.fr        #
+#    Updated: 2018/12/10 17:19:06 by sarbaill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,18 +47,21 @@ SRC = 	ft_atoi.c \
 
 OBJ = $(SRC:.c=.o)
 
-FLAG = -c -Wall -Wextra -Werror
-HEADER = libft.h
+FLAG = -Wall -Wextra -Werror
 
 all : $(NAME)
 
-$(NAME) : 	$(OBJ)
-			@ar rc $(NAME) $(OBJ)
+$(NAME): $(OBJ)
+			ar rcs $(NAME) $(OBJ)
+
 %.o : %.c
-			@gcc -c $< $(FLAG)
+			gcc -c $< $(FLAG)
+
 clean :
-			@rm -rf $(OBJ)
+			rm -rf $(OBJ)
+
 fclean :	clean
-			@rm -rf $(NAME)
+			rm -rf $(NAME)
+
 re :		fclean all
 

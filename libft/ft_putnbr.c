@@ -6,7 +6,7 @@
 /*   By: sarbaill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 22:56:09 by sarbaill          #+#    #+#             */
-/*   Updated: 2018/12/02 22:56:19 by sarbaill         ###   ########.fr       */
+/*   Updated: 2018/12/10 18:52:26 by sarbaill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ void	ft_putnbr(int nb)
 		ft_putchar(nb % 10 + 48);
 	}
 	else
-		ft_putchar	(nb + 48);
+		ft_putchar(nb + 48);
 }

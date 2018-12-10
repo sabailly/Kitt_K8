@@ -6,7 +6,7 @@
 /*   By: sarbaill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/30 16:42:24 by sarbaill          #+#    #+#             */
-/*   Updated: 2018/12/02 23:08:21 by sarbaill         ###   ########.fr       */
+/*   Updated: 2018/12/10 19:01:09 by sarbaill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strncat(char *dest, const char *src, size_t nb)
 {
-	int i;
-	int offset;
+	size_t	i;
+	int		offset;
 
 	i = 0;
 	offset = 0;
-	while(dest[offset])
+	while (dest[offset])
 		offset++;
 	while (i < nb && src[i] != '\0')
 	{
