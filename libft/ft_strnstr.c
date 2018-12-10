@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strncmp.c                                          :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarbaill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/30 19:38:33 by sarbaill          #+#    #+#             */
-/*   Updated: 2018/12/04 16:39:28 by sarbaill         ###   ########.fr       */
+/*   Created: 2018/12/05 19:56:02 by sarbaill          #+#    #+#             */
+/*   Updated: 2018/12/10 17:05:54 by sarbaill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n)
+char *ft_strnstr(const char *str, const char *needle, size_t len)
 {
-	unsigned int i;
+	int i;
 
 	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
+	while(i < len)
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+		if (ft_strncmp(&str[i], needle, ft_strlen(needle)) == 0)
+			return ((char*)&str[i]);
 		i++;
 	}
 	return (0);

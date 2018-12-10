@@ -6,7 +6,7 @@
 /*   By: sarbaill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 16:45:42 by sarbaill          #+#    #+#             */
-/*   Updated: 2018/12/02 17:12:21 by sarbaill         ###   ########.fr       */
+/*   Updated: 2018/12/05 17:27:16 by sarbaill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *str, int c, size_t len)
 
 	i = 0;
 	s = (char*)str;
-	while (i < len)
+	while (s[i] < len)
 	{
 		s[i] = (char)c;
 		i++;
