@@ -14,6 +14,11 @@
 # define LIBFT_H
 # include <string.h>
 # include <stdlib.h>
+# include <unistd.h>
+
+/*
+** PART I FUNCTIONS
+*/
 
 int		ft_atoi(const char *str);
 int		ft_isalnum(int c);
@@ -46,4 +51,12 @@ size_t	ft_strlen(const char *str);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+
+/*
+** PART II FUNCTIONS
+*/
+
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(const char *s, int fd);
+
 #endif
