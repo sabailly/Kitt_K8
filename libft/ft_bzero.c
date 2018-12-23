@@ -5,23 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sarbaill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/05 17:00:26 by sarbaill          #+#    #+#             */
-/*   Updated: 2018/12/10 17:18:09 by sarbaill         ###   ########.fr       */
+/*   Created: 2018/12/12 17:02:50 by sarbaill          #+#    #+#             */
+/*   Updated: 2018/12/17 11:44:56 by sarbaill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_bzero(void *str, size_t len)
 {
-	size_t	i;
-	char	*str;
-
-	str = (char*)s;
-	i = 0;
-	while (i < n)
-	{
-		str[i] = '\0';
-		i++;
-	}
+	if (!str)
+		return ;
+	ft_memset(str, 0, len);
 }
