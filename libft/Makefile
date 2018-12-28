@@ -6,7 +6,7 @@
 #    By: sarbaill <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/02 23:53:25 by sarbaill          #+#    #+#              #
-#    Updated: 2018/12/23 19:11:51 by sarbaill         ###   ########.fr        #
+#    Updated: 2018/12/28 19:31:59 by sarbaill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,6 +50,7 @@ SRC = 	ft_atoi.c \
 		ft_strclr.c \
 		ft_putnbr_fd.c \
 		ft_memalloc.c \
+		ft_memdel.c \
 
 OBJ = $(SRC:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: sarbaill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 19:27:30 by sarbaill          #+#    #+#             */
-/*   Updated: 2018/12/23 19:13:48 by sarbaill         ###   ########.fr       */
+/*   Updated: 2018/12/28 19:31:58 by sarbaill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,5 @@ void	ft_putendl_fd(char const *str, int fd);
 void	ft_strclr(char *str);
 void	ft_putnbr_fd(int n, int fd);
 void	*ft_memalloc(size_t size);
+void	ft_memdel(void **ap);
 #endif
