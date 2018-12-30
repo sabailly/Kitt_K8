@@ -14,5 +14,20 @@
 
 char	*ft_strnew(size_t size)
 {
-	
+	char	*str;
+	size_t	i;
+
+	i = 0;
+	str = malloc(size);
+	if (!str)
+		return (NULL);
+	else
+	{
+		while (i < size)
+		{
+			str[i] = '\0';
+			i++;
+		}
+		return (str);
+	}
 }
