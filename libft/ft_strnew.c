@@ -6,7 +6,7 @@
 /*   By: sarbaill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/28 19:28:31 by sarbaill          #+#    #+#             */
-/*   Updated: 2018/12/28 19:31:55 by sarbaill         ###   ########.fr       */
+/*   Updated: 2019/01/04 19:40:40 by sarbaill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ char	*ft_strnew(size_t size)
 	size_t	i;
 
 	i = 0;
-	str = malloc(size);
-	if (!str)
+	if (!(str = (char*)malloc(sizeof(char) * (size) + 1)))
 		return (NULL);
 	else
 	{

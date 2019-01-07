@@ -6,7 +6,7 @@
 /*   By: sarbaill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/17 10:48:01 by sarbaill          #+#    #+#             */
-/*   Updated: 2018/12/17 11:37:55 by sarbaill         ###   ########.fr       */
+/*   Updated: 2019/01/04 19:36:17 by sarbaill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,12 @@ void	ft_putstr_fd(char const *s, int fd)
 	int i;
 
 	i = 0;
-	while (s[i])
+	if (s)
 	{
-		ft_putchar_fd(s[i], fd);
-		i++;
+		while (s[i])
+		{
+			ft_putchar_fd(s[i], fd);
+			i++;
+		}
 	}
 }

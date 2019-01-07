@@ -6,7 +6,7 @@
 /*   By: sarbaill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/28 16:00:31 by sarbaill          #+#    #+#             */
-/*   Updated: 2018/12/10 17:40:22 by sarbaill         ###   ########.fr       */
+/*   Updated: 2019/01/04 19:46:40 by sarbaill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ char	*ft_strdup(const char *src)
 	char	*res;
 
 	len = ft_strlen(src);
-	res = (char*)malloc(sizeof(char) * (len + 1));
+	if (!(res = (char*)malloc(sizeof(char) * (len + 1))))
+		return (NULL);
 	ft_strcpy(res, (char *)src);
 	return (res);
 }

@@ -6,7 +6,7 @@
 /*   By: sarbaill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 22:57:44 by sarbaill          #+#    #+#             */
-/*   Updated: 2018/12/17 11:05:11 by sarbaill         ###   ########.fr       */
+/*   Updated: 2019/01/04 19:33:11 by sarbaill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,13 @@ void	ft_putendl(char *str)
 	int i;
 
 	i = 0;
-	while (str[i])
+	if (str)
 	{
-		ft_putchar(str[i]);
-		i++;
+		while (str[i])
+		{
+			ft_putchar(str[i]);
+			i++;
+		}
+		ft_putchar('\n');
 	}
-	ft_putchar('\n');
 }

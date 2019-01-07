@@ -1,31 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sarbaill <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/12/31 17:21:16 by sarbaill          #+#    #+#             */
+/*   Updated: 2019/01/02 19:09:59 by sarbaill         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
+#include "stdio.h"
 
 char	*ft_strtrim(char const *s)
 {
-	size_t	i;
-	size_t	j;
-	size_t	k;
-	size_t	len;
-	char	*new;
+	unsigned int	start;
+	size_t			end;
 
 	if (!s)
 		return (NULL);
-	i = 0;
-	len = ft_strlen(s);
-	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
-		i++;
-	j = len - 1;
-	while (s[j] == ' ' || s[j] == '\n' || s[j] == '\t')
-		j--;
-	new = malloc(j - i);
-	if (!new)
-		return (NULL);
-	k = 0;
-	while (i <= j)
-	{
-		new[k] = s[i];
-		i++;
-		k++;
-	}
-	return (new);
+	start = 0;
+	end = ft_strlen(s) - 1;
+	while (s[start] == ' ' || s[start] == '\t' || s[start] == '\n')
+		start++;
+	if (start == end + 1)
+		return (ft_strnew(0));
+	while (s[end] == ' ' || s[end] == '\t' || s[end] == '\n')
+		end--;
+	return (ft_strsub(s, start, (end - start + 1)));
 }

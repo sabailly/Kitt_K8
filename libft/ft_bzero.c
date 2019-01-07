@@ -6,7 +6,7 @@
 /*   By: sarbaill <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/12 17:02:50 by sarbaill          #+#    #+#             */
-/*   Updated: 2018/12/17 11:44:56 by sarbaill         ###   ########.fr       */
+/*   Updated: 2019/01/04 19:44:46 by sarbaill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 void	ft_bzero(void *str, size_t len)
 {
-	if (!str)
-		return ;
 	ft_memset(str, 0, len);
 }
